@@ -144,7 +144,7 @@ def add_caption(video_id, caption_path, user_id):
         logging.info(f'Success Caption file uploaded: {caption_path}')
 
 
-df = readcsv()
+df = readcsv(config["csv_path"])
 
 for each in df.index:
     video_id = upload_to_yuja('media/'+df['video_path'][each],df['video_name'][each],df['login_id'][each])
